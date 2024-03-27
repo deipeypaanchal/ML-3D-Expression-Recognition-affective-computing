@@ -1,3 +1,6 @@
+# Name: Deipey Paanchal
+# U-Number: U80305771
+
 '''
 # Description: This script is the main entry point for the project. It reads the command line arguments and calls the process_data and evaluate functions.
 # The main function checks if the classifier and data type are valid before calling the process_data function to read the data.
