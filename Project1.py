@@ -40,6 +40,8 @@ def main():
     if (classifier not in valid_classifiers) or (data_type not in valid_data_types):
         print("Invalid classifier or data type")
         print("Usage: python Project1.py <classifier> <data_type> <data_directory>")
+        print("If using virtual env: venv/bin/python Project1.py <classifier> <data_type> <data_directory>")
+        print("Please make sure to have the dependencies installed OR use the virtual environment.")
         sys.exit()
     print("Process started...")        
     print(f"{classifier} {data_type}")
