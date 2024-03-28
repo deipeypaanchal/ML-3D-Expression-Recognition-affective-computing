@@ -10,10 +10,10 @@ The 3D Expression Recognition Project is designed to understand and interpret hu
 
 Ensure you have Python 3.8 or later installed, along with the following packages:
 
-- NumPy
-- SciPy
-- scikit-learn
-- matplotlib
+- `NumPy`: A fundamental package for numerical computation in Python. It is used for handling arrays and matrices, which are essential for storing and processing the 3D landmark data.
+- `SciPy`: A Python library used for scientific and technical computing. It offers modules for optimization, integration, interpolation, and other tasks useful in data processing and analysis.
+- `scikit-learn`: A powerful tool for machine learning in Python. It provides simple and efficient tools for data mining and data analysis, including the classifiers used in this project.
+- `matplotlib`: A plotting library for the Python programming language and its numerical mathematics extension, NumPy. It is used here to generate 3D scatter plots of the facial landmarks for visual analysis.
 
 Install these using pip:
 
