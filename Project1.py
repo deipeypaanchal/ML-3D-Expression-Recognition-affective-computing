@@ -27,6 +27,8 @@ def main():
     if len(sys.argv) != 4:
         print("Usage: python Project1.py <classifier> <data_type> <data_directory>")
         print("Example: python Project1.py TREE Original ./BU4DFE_BND_V1.1")
+        print("If using virtual env make sure to activate it and then: venv/bin/python Project1.py <classifier> <data_type> <data_directory>")
+        print("Please make sure to have the dependencies installed OR use the virtual environment.")
         sys.exit()
     
     # Read command line arguments
@@ -40,8 +42,6 @@ def main():
     if (classifier not in valid_classifiers) or (data_type not in valid_data_types):
         print("Invalid classifier or data type")
         print("Usage: python Project1.py <classifier> <data_type> <data_directory>")
-        print("If using virtual env: venv/bin/python Project1.py <classifier> <data_type> <data_directory>")
-        print("Please make sure to have the dependencies installed OR use the virtual environment.")
         sys.exit()
     print("Process started...")        
     print(f"{classifier} {data_type}")
