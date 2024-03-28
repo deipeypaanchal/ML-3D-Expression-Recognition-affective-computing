@@ -23,13 +23,13 @@ pip install numpy scipy scikit-learn matplotlib
 
 ## Project Structure
 
-- **classify.py**: Implements cross-validation and prints evaluation metrics.
-- **evaluate.py**: Evaluates classifiers with cross-validation, handling classifier initialization and metric calculations.
-- **landmarks.py**: Provides functions for translating and rotating landmarks in the dataset.
-- **plot.py**: Utilizes matplotlib for plotting data in 3D scatter plots.
-- **process_data.py**: Processes data from the CK+ dataset, preparing it for classification by transforming landmarks based on input data type.
-- **Project1.py**: Main entry point, orchestrating the data processing and evaluation pipeline.
-- **README.md**: This file, providing an overview and instructions for the project.
+- `classify.py`: Implements cross-validation and prints evaluation metrics.
+- `evaluate.py`: Evaluates classifiers with cross-validation, handling classifier initialization and metric calculations.
+- `landmarks.py`: Provides functions for translating and rotating landmarks in the dataset.
+- `plot.py`: Utilizes matplotlib for plotting data in 3D scatter plots.
+- `process_data.py`: Processes data from the CK+ dataset, preparing it for classification by transforming landmarks based on input data type.
+- `Project1.py`: Main entry point, orchestrating the data processing and evaluation pipeline.
+- `README.md`: This file, providing an overview and instructions for the project.
 
 ## Setup and Usage
 
