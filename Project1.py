@@ -27,8 +27,8 @@ def main():
     if len(sys.argv) != 4:
         print("Usage: python Project1.py <classifier> <data_type> <data_directory>")
         print("Example: python Project1.py TREE Original ./BU4DFE_BND_V1.1")
-        print("If using virtual env make sure to activate it and then: venv/bin/python Project1.py <classifier> <data_type> <data_directory>")
-        print("Please make sure to have the dependencies installed OR use the virtual environment.")
+        print("Please make sure that you have the libraries needed for this project installed globally otherwise use the virtual environment.")
+        print("If using virtual env make sure to activate it first and then: venv/bin/python Project1.py <classifier> <data_type> <data_directory>")
         sys.exit()
     
     # Read command line arguments
