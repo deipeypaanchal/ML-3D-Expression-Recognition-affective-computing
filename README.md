@@ -1,65 +1,78 @@
 # 3D Expression Recognition Project
 
-This project leverages machine learning to analyze 3D facial landmarks, employing three classic classifiers: Random Forest (RF), Support Vector Machine (SVM), and Decision Tree (TREE). Our aim is to assess the effectiveness of these classifiers across different data manipulations—original, translated, and rotated 3D landmarks—to generate insightful reports on their performance metrics.
+This project leverages advanced machine learning techniques to analyze 3D facial landmarks, utilizing three classic classifiers: Random Forest (RF), Support Vector Machine (SVM), and Decision Tree (TREE). Our goal is to evaluate the effectiveness of these classifiers across various data manipulations—original, translated, and rotated 3D landmarks—to produce detailed reports on their performance metrics.
 
-## Packages Used
+## Overview
 
-To ensure smooth execution of this project, the following Python packages are utilized:
+The 3D Expression Recognition Project is designed to understand and interpret human expressions through 3D facial landmark analysis. By employing machine learning classifiers on different manipulations of 3D data, we aim to uncover the nuances in facial expressions that differentiate one emotion from another.
 
-- `sys`: For accessing system-specific parameters and functions.
-- `os`: To interact with the operating system.
-- `numpy`: Essential for numerical computing.
-- `math`: Provides access to mathematical functions.
-- `sklearn`: The core machine learning library used for implementing classifiers and evaluation metrics.
-  - `sklearn.ensemble`: For ensemble-based machine learning algorithms.
-  - `sklearn.tree`: Contains decision tree-based algorithms.
-  - `sklearn.metrics`: Offers metrics to evaluate machine learning models.
-  - `sklearn.model_selection`: Tools for model selection and evaluation.
-- `random`: Generates random numbers.
-- `matplotlib`: For plotting and visualizing data.
+## Dependencies
 
-## Installation
+Ensure you have Python 3.8 or later installed, along with the following packages:
 
-Before running the project, ensure all required packages are installed. This can be done via pip:
+- NumPy
+- SciPy
+- scikit-learn
+- matplotlib
+
+Install these using pip:
 
 ```bash
-pip install numpy scikit-learn matplotlib
-```
-
-For other packages (sys, os, math, and random), these come pre-installed with Python.
-
-## Usage
-
-To run the project, navigate to the project directory and execute the following command in your terminal:
-
-```bash
-python Project1.py <classifier> <data type> <data directory>
-```
-
-- `<classifier>`: Choose between RF, SVM, or TREE.
-- `<data type>`: Specify the type of data manipulation (Original, Translated, or Rotated).
-- `<data directory>`: The path to the data directory containing 3D facial landmarks.
-
-Example:
-
-```bash
-python Project1.py TREE Original ./BU4DFE_BND_V1.1
+pip install numpy scipy scikit-learn matplotlib
 ```
 
 ## Project Structure
 
-Ensure your data directory (`./BU4DFE_BND_V1.1`) is structured properly with subject directories and expression-specific `.BND` files as described.
+- **classify.py**: Implements cross-validation and prints evaluation metrics.
+- **evaluate.py**: Evaluates classifiers with cross-validation, handling classifier initialization and metric calculations.
+- **landmarks.py**: Provides functions for translating and rotating landmarks in the dataset.
+- **plot.py**: Utilizes matplotlib for plotting data in 3D scatter plots.
+- **process_data.py**: Processes data from the CK+ dataset, preparing it for classification by transforming landmarks based on input data type.
+- **Project1.py**: Main entry point, orchestrating the data processing and evaluation pipeline.
+- **README.md**: This file, providing an overview and instructions for the project.
+
+## Setup and Usage
+
+1. Clone or download this repository.
+2. Install the required dependencies as listed.
+3. To run the project, navigate to the project directory and execute:
+
+```bash
+python Project1.py <classifier> <data_type> <data_directory>
+```
+
+- `<classifier>`: Choose between `RF`, `SVM`, or `TREE`.
+- `<data_type>`: Specify `Original`, `Translated`, or `Rotated`.
+- `<data_directory>`: Path to the dataset.
+
+Example command:
+
+```bash
+python Project1.py TREE Original ./data_directory
+```
 
 ## Experiments
+The project conducts three main experiments to assess classifier performance:
 
-The project conducts three main experiments with 10-fold cross-validation:
+- **Raw 3D Landmarks**: Utilizes the original 3D landmarks without any manipulation.
+- **Translated 3D Landmarks**: Translates the landmarks to the origin, centralizing the data.
+- **Rotated 3D Landmarks**: Rotates the landmarks around the x, y, and z axes to test classifier robustness to orientation changes.
 
-1. **Raw 3D Landmarks:** Utilize the original 3D landmarks as the feature vector.
-2. **Translated 3D Landmarks:** Translate the landmarks to the origin by averaging and subtracting the coordinates.
-3. **Rotated 3D Landmarks:** Rotate the landmarks 180 degrees over the x, y, and z axes.
+Each experiment utilizes 10-fold cross-validation to ensure the reliability of the performance metrics—accuracy, precision, recall, and confusion matrices. The insights derived from these experiments are crucial for understanding the strengths and limitations of each classifier in the context of 3D expression recognition.
 
-For each classifier and experiment, calculate the confusion matrix, accuracy, precision, and recall. Remember to save these results for analysis.
+## Performance Insights
 
-## Note
+Based on extensive experimentation, the Random Forest classifier consistently outperforms SVM and Decision Trees across different data types due to its ability to manage high-dimensional data and reduce overfitting through ensemble learning.
 
-It's recommended to install the libraries in a virtual environment to avoid conflicts with other projects or system-wide packages.
+For each data type, here's a brief insight into the classifier performance:
+- **Original Data**: Best handled by Random Forest, benefiting from the complexity and dimensionality of the data.
+- **Translated Data**: Slight performance drop for all classifiers, with Random Forest still leading.
+- **Rotated Data**: Random Forest excels, demonstrating its robustness to variations in data orientation.
+
+Detailed metrics such as accuracy, precision, and recall for each classifier and data type are provided in the `Project Report.pdf`.
+
+## Additional Notes
+
+It's recommended to use a virtual environment for installing dependencies to avoid conflicts with system-wide packages.
+
+For more detailed insights into the project's background, methodology, and results, please refer to the included `Project Report.pdf`.
