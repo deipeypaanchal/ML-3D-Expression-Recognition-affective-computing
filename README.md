@@ -19,3 +19,7 @@ The following packages are used in this project:
 To use this project, make sure you have the required packages installed.
 Input format: python Project1.py <classifier to run> <data type to use> <data directory>
 Example: python Project1.py TREE Original ./BU4DFE_BND_V1.1
+
+# Note
+
+Please make sure that you have installed the libraries globally or virtually.
