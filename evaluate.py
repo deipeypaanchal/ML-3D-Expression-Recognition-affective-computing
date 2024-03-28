@@ -83,4 +83,4 @@ def evaluate(X, y, classifier, data_type, subjects):
         print("Error writing the file:", e)
     
     # Plot the data in a 3D scatter plot
-    generate_plot(X, data_type)   
+    generate_plot(X, data_type)
